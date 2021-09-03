@@ -1,3 +1,4 @@
+# If a cat is microchiped, you can add a "completed" status next to it.
 import boto3
 import json
 
