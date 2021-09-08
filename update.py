@@ -8,12 +8,13 @@ def lambda_handler(event, context):
     
     catID = event['cat_id']
     catName = event['name']
+    fur = event['fur_color']
     
     response = table.get_item(Key={'cat_id': catID,
                                    'name': catName})
 
     item = response['Item']   
-    item['status'] = 'complete'
+    item['fur_color'] = fur
      
     table.put_item(Item=item)
     
